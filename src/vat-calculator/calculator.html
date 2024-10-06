@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Project-TS Mehrwertsteuer-Rechner-App</title>
+</head>
+<body>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <form action="">
+        <article class="radio-wrapper">
+            <h3>Was soll berechnet werden?</h3>
+            <div>
+            <input type="radio" name="sameName" id="netto2brutto" value="add" checked="checked">
+            <label for="netto2brutto">Mehrwertsteuer aufschlagen(Netto zu Brutto)</label>
+        </div>
+        <div>
+            <input type="radio" name="sameName" id="brutto2netto" value="reduce">
+            <label for="brutto2netto">Brutto zu Netto</label>
+        </div>
+        </article>
+        <article class="radio-wrapper">
+            <h3>Mehrwertsteuersatz</h3>
+            <div>
+            <input type="radio" name="" id="percent19" checked="checked">
+            <label for="percent19">19%</label>
+        </div>
+            <input type="radio" name="" id="percent7">
+            <label for="percent7">7%</label>
+        </article>
+        <article>
+            <p>Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span> </p>
+            <input type="number" name="" id="insertAmount">
+            
+        </article>
+        <button id="calculateBtn">Berechnen</button>
+        <section>
+            <h2>Ergebnis</h2>
+            <article>
+                <h3>Mehrwertsteuerbetrag</h3>
+                <h3>€ <span class="results">345</span></h3>
+            </article>
+            <article>
+                <h3>Bruttobetrag (Endpreis)</h3>
+                <h3>€ <span class="results">354647</span></h3>
+            </article>
+        </section>
+    </form>
+    <script type="module" src="./calculator.ts"></script>
+</body>
+</html>
