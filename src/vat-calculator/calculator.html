@@ -12,26 +12,28 @@
         <article class="radio-wrapper">
             <h3>Was soll berechnet werden?</h3>
             <div>
-            <input type="radio" name="sameName" id="netto2brutto" value="add" checked="checked">
+            <input type="radio" name="vat" id="netto2brutto" value="add" checked="checked">
             <label for="netto2brutto">Mehrwertsteuer aufschlagen(Netto zu Brutto)</label>
         </div>
         <div>
-            <input type="radio" name="sameName" id="brutto2netto" value="reduce">
+            <input type="radio" name="vat" id="brutto2netto" value="reduce">
             <label for="brutto2netto">Brutto zu Netto</label>
         </div>
         </article>
         <article class="radio-wrapper">
             <h3>Mehrwertsteuersatz</h3>
             <div>
-            <input type="radio" name="" id="percent19" checked="checked">
+            <input type="radio" name="percentage" id="percent19" checked="checked">
             <label for="percent19">19%</label>
         </div>
-            <input type="radio" name="" id="percent7">
+        <div>
+            <input type="radio" name="percentage" id="percent7">
             <label for="percent7">7%</label>
+        </div>
         </article>
         <article>
-            <p>Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span> </p>
-            <input type="number" name="" id="insertAmount">
+            <p id="amountTextChange">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span> </p>
+            <input type="number" name="" id="insertAmount" required>
             
         </article>
         <button id="calculateBtn">Berechnen</button>
@@ -39,11 +41,11 @@
             <h2>Ergebnis</h2>
             <article>
                 <h3>Mehrwertsteuerbetrag</h3>
-                <h3>€ <span class="results">345</span></h3>
+                <h3>€ <span id="taxAmount" class="results">345</span></h3>
             </article>
             <article>
-                <h3>Bruttobetrag (Endpreis)</h3>
-                <h3>€ <span class="results">354647</span></h3>
+                <h3 id="totalTextChange">Bruttobetrag (Endpreis)</h3>
+                <h3>€ <span id="totalAmount" class="results">37</span></h3>
             </article>
         </section>
     </form>
